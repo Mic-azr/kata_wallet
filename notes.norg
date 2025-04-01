@@ -1,0 +1,5 @@
+Notes to take while I work on project
+
+4/1/2025
+Added basic setters and getters to Wallet class
+Wrote a unit test for Wallet to test getters and setters
