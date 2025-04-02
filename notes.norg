@@ -3,3 +3,11 @@ Notes to take while I work on project
 4/1/2025
 Added basic setters and getters to Wallet class
 Wrote a unit test for Wallet to test getters and setters
+Will need to register my email with Open Exchange Rates for an API key
+Going to read this article https://docs.openexchangerates.org/reference/api-introduction before starting work on CurrencyConverter
+Wanted to learn more about the git stash command and now I'm going on a journey into the developer's tutorial in the Git documentation
+That's something I had ought to work through in an editor as I read. I shouldn't get distracted right now. But that's something I want to make time for later.
+Made my first API request in the browser! I have my API key now, and there's even some Java code provided in the documentation. Sweet!
+Spoke too soon; the request I sent to /currencies.json went through because that doesn't need an API key. The key I got isn't working even after I verified my email.
+Keep getting a 401 invalid_app_id error
+Maybe this is something I should try and resolve tomorrow. I don't want to be using up all my requests if my key hasn't been validated yet.

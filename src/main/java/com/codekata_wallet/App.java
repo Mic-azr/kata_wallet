@@ -6,7 +6,7 @@ package com.codekata_wallet;
  * The Stocks have a quantity and a StockType. The StockType can be for example petroleum, Euros, bitcoins and Dollars.
  * To value the portfolio in a Currency you can use external api to provide rate exchanges
  * 
- * Code written 3/27/2025
+ * @author Michael
  */
 public class App 
 {
