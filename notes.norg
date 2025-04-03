@@ -11,3 +11,14 @@ Made my first API request in the browser! I have my API key now, and there's eve
 Spoke too soon; the request I sent to /currencies.json went through because that doesn't need an API key. The key I got isn't working even after I verified my email.
 Keep getting a 401 invalid_app_id error
 Maybe this is something I should try and resolve tomorrow. I don't want to be using up all my requests if my key hasn't been validated yet.
+
+4/3/2025
+Going to see if API key will work today.
+Still getting an invalid id error when making an API request in the browser documentation. Sent an email to support.
+Going to try https://api.fixer.io/ 
+Maybe not! Why would they want my street address?
+Found an API to use at https://apiplugin.com/dashboard
+Importing java.net.HttpURLConnection into CurrencyConverter. No idea how to use it but I will learn.
+Found this resource to help write Java code (no example Java code in the CurrenctExchangeAPI documentation): https://www.omi.me/blogs/api-guides/how-to-fetch-currency-exchange-rates-using-exchangerate-api-in-java
+Shouldn't use that Java library! Will be using this instead: https://docs.oracle.com/en/java/javase/24/docs/api/java.net.http/java/net/http/HttpRequest.html
+Results from endpoint will be formatted as JSON, might need to import a library to handle that
