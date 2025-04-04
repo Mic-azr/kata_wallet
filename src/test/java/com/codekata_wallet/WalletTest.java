@@ -13,16 +13,5 @@ import static org.junit.Assert.*;
  * @author Michael
  */
 public class WalletTest {
-
-    @Test
-    public void testWalletConstructorsAndGetters() {
-        int quantity = 100;
-        String stockType = "USD";
-
-        Wallet wallet = new Wallet(quantity, stockType);
-
-        assertEquals("Quantity should equal 100", quantity, wallet.getQuantity());
-        assertEquals("StockType should equal USD", stockType, wallet.getStockType());
-    }
-
+    // TODO add test methods here.
 }

@@ -9,7 +9,9 @@ import java.net.http.HttpResponse;
 */
 public class CurrencyConverter {
     private String apiKey = "YOUR_API_KEY";
-    private String apiExchangeEndpoint = "https://v1.apiplugin.io/v1/currency/" + apiKey + "/rates/convert";
+    private String from = "from"; //Should be a 3-letter currency code (e.g., "USD", "EUR")
+    private String to = "to"; //Should be a 3-letter currency code (e.g., "USD", "EUR")
+    private String apiExchangeEndpoint = "https://v6.exchangerate-api.com/v6/" + apiKey + "/pair/" + from + "/" + to;
 
     // public CurrencyConverter() {
     // public double getExchangeRate(String fromCurrency, String toCurrency) {

@@ -22,3 +22,7 @@ Importing java.net.HttpURLConnection into CurrencyConverter. No idea how to use 
 Found this resource to help write Java code (no example Java code in the CurrenctExchangeAPI documentation): https://www.omi.me/blogs/api-guides/how-to-fetch-currency-exchange-rates-using-exchangerate-api-in-java
 Shouldn't use that Java library! Will be using this instead: https://docs.oracle.com/en/java/javase/24/docs/api/java.net.http/java/net/http/HttpRequest.html
 Results from endpoint will be formatted as JSON, might need to import a library to handle that
+
+4/4/2025
+Found a free currency exchange api at https://www.exchangerate-api.com/
+Will be using that for CurrencyConverter class

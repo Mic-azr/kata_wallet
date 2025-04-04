@@ -12,13 +12,12 @@ public class App
 {
     public static void main( String[] args )
     {
-        //Convert value in wallet to another currency using external API
-        //Wallet(Stock(quantity, StockType))
-        //Value value = Wallet.getValue()
-        // Need to make calls to an external API for currency types and exchange rates.
-        // Some I'm looking at:
-        // https://openexchangerates.org/about
-        // https://api.fixer.io/
-        // https://currencyapi.com/
+        // Convert value in wallet to another currency using external API
+        //
+        // Given object sample:
+        // Value value = Wallet(Stock(5, PETROLEUM)).value(EUR, rateProvider)
+        //
+        // CurrencyConverter should be an example of this interface:
+        // CurrencyConverter.convert(from: StockType, to: Currency) -> double
     }
 }

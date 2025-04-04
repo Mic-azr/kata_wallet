@@ -13,16 +13,16 @@ import static org.junit.Assert.*;
  * @author Michael
  */
 public class StockTest {
-
     @Test
     public void testStockConstructorAndGetters(){
-        int quantity = 101;
-        String stockType = "USD";
+        int expectedQuantity = 101;
+        int actualQuantity = 101;
+        String expectedStockType = "USD";
+        String actualStockType = "USD";
 
-        Stock stock = new Stock(quantity, stockType);
+        Stock stock = new Stock(actualQuantity, actualStockType);
 
-        assertEquals("Quantity should equal 101", quantity, stock.getQuantity());
-        assertEquals("StockType should equal USD", stockType, stock.getStockType());
+        assertEquals("Quantity should equal" + expectedQuantity, actualQuantity, stock.getQuantity());
+        assertEquals("StockType should equal" + expectedStockType, actualStockType, stock.getStockType());
     }
-
 }
