@@ -26,3 +26,42 @@ Results from endpoint will be formatted as JSON, might need to import a library 
 4/4/2025
 Found a free currency exchange api at https://www.exchangerate-api.com/
 Will be using that for CurrencyConverter class
+
+4/7/2025
+Next big hurdle for CurrencyConverter is to parse the JSON request I will get back from the api.
+I need the currency exchange rate from one currency to another. That value is in the request, I just need to pull it out and save it to a variable.
+I think I should make sure I have Wallet working and tested before I import more stuff into this project though. I bet Java has a standard library for JSON objects.
+Copilot's code for the Wallet class looks a little funny:
+'''java
+package com.codekata_wallet;
+
+import java.util.List;
+
+public class Wallet {
+    private List<Stock> stocks;
+
+    public Wallet(List<Stock> stocks) {
+        this.stocks = stocks;
+    }
+
+    public List<Stock> getStocks() {
+        return stocks;
+    }
+
+    // Placeholder for computing the wallet value
+    public double getValue(String targetCurrency, CurrencyConverter converter) {
+        double totalValue = 0.0;
+        for (Stock stock : stocks) {
+            double rate = converter.getExchangeRate(stock.getStockType(), targetCurrency);
+            totalValue += stock.getQuantity() * rate;
+        }
+        return totalValue;
+    }
+}
+'''
+java.util.List is an interface. 
+You shouldn't be able to instantiate a List object, you would need to create a class that implements list.
+The private List<Stock> stocks variable should be instatiated as one of Java's List implementation types.
+Java has ArrayList, LinkedList, Stack and Vector as built in List implementation classes.
+Going to try and use LinkedList for this exercise, since I'm more familiar with that.
+I think it would also be fine to use ArrayList. Might try doing that another time.
