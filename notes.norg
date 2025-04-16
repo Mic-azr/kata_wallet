@@ -65,3 +65,26 @@ The private List<Stock> stocks variable should be instatiated as one of Java's L
 Java has ArrayList, LinkedList, Stack and Vector as built in List implementation classes.
 Going to try and use LinkedList for this exercise, since I'm more familiar with that.
 I think it would also be fine to use ArrayList. Might try doing that another time.
+May need to do that sooner than later. I should rethink using a LinkedList for this problem.
+From https://www.geeksforgeeks.org/applications-advantages-and-disadvantages-of-linked-list/:
+"Slow Access Time: 
+Accessing elements in a linked list can be slow, 
+as you need to traverse the linked list to find the element you are looking for, which is an O(n) operation. 
+This makes linked lists a poor choice for situations where you need to access elements quickly."
+I don't want accessing one kind of Stock from the Wallet to be slower than accessing another kind.
+I think a Dictionary would be well-suited to this problem, since Stocks are really just String:int pairs.
+https://www.geeksforgeeks.org/java-util-dictionary-class-java/?ref=lbp
+
+4/16/2025
+Looking through my Java textbooks and some online resources, I think it would be best if I used an implementation class from the Map interface, rather than Dictionary.
+I had a feeling I was getting my Python and Java wires crossed.
+That java.util.Currency import leering at me as I scroll down to HashMap... let me do one thing at a time please T_T
+Don't know if HashMap is right either. Since HashMap doesn't allow for duplicate keys, we can't add multiple Stocks of similar currency, I think.
+https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/
+Would a Set be the correct data structure to use for this problem? No specific order, but also no duplicate values allowed.
+I'm thinking of a Wallet as something like [("USD", 20), ("EUR", 10), ("BTC", 15)] and I should be able to use a built-in Collections method to add a Stock of similar currency
+So the Wallet could become something like [("USD", 20), ("EUR", 10), ("BTC", 15), ("USD", 50)] and the values of the similar currency would only need to be calculated when calling the getWalletValue() method
+https://www.geeksforgeeks.org/arraylist-in-java/
+Looking like ArrayList is what I'm looking for. I'm wondering if there's anything better though. The order of the Stocks in the Wallet isn't necessarily important.
+Shodan's telling me to use a HashMap actually, and I am going to have to implement a method to add similar currency values when adding Stocks to the Wallet.
+I guess it's right that it is more memory efficient not to have multiple entries of different quantities of the same currency.
