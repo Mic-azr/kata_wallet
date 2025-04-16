@@ -11,10 +11,22 @@ public class Wallet {
     }
 
     // TODO:
-    // public void addStock(Stock stock) {}
+    // public Wallet(HashMap<String, Stock> stocks) {}
 
-    // TODO:
-    // public Stock getStock(String stockType) {}
+    public void addStock(Stock stock) {
+        String currency = stock.getStockType();
+        if (stocks.containsKey(currency)) { //checking if stocks HashMap contains currency of the same type as Stock being put into the HashMap
+            Stock existingStock = stocks.get(currency);
+            existingStock.setQuantity(existingStock.getQuantity() + stock.getQuantity());
+        }
+        else {
+            stocks.put(currency, stock);
+        }
+    }
+
+    public Stock getStock(String stockType) {
+        return stocks.get(stockType);
+    }
 
     // TODO:
     // public int getWalletValue() {}
