@@ -33,6 +33,8 @@ public class StockTest {
 
         Stock stock = new Stock(testQuantity, testStockType);
 
-        assertEquals("Strings should be equal", "Stock{quantity=125, stockType='EUR'}", stock.toString());
+        assertEquals("Strings should be equal", 
+            "Stock{quantity=" + testQuantity + ", stockType='" + testStockType + "'}", 
+            stock.toString());
     }
 }
