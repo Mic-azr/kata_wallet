@@ -25,17 +25,19 @@ public class WalletTest {
         }
     }
 
-    // TODO:
-    // @Test
-    // public void testWalletOverloadedConstructor() {
-    //  HashMap<String, Stock> testStockHashMap = new HashMap<>();
-    // try {
-    //  Wallet testWallet(testStockHashMap) = new Wallet();
-    //  }
-    // catch(Exception e) {
-    //  fail(e.getMessage());
-    //  }
-    // }
+    @Test
+    public void testWalletOverloadedConstructor() {
+        HashMap<String, Stock> testStockHashMap = new HashMap<>();
+        Stock testStock = new Stock(20, "USD");
+        testStockHashMap.put(testStock.getStockType(), testStock);
+
+        try {
+            Wallet testWallet = new Wallet(testStockHashMap);
+        }
+        catch(Exception e) {
+            fail(e.getMessage());
+        }
+    }
     
     @Test
     public void testAddStock() {

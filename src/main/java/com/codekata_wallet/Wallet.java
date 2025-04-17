@@ -10,8 +10,9 @@ public class Wallet {
         this.stocks = new HashMap<>();
     }
 
-    // TODO:
-    // public Wallet(HashMap<String, Stock> stocks) {}
+    public Wallet(HashMap<String, Stock> stocks) {
+        this.stocks = stocks;
+    }
 
     public void addStock(Stock stock) {
         String currency = stock.getStockType();
@@ -30,6 +31,7 @@ public class Wallet {
 
     // TODO:
     // public int getWalletValue() {}
+    // Depends on CurrencyConverter
 
     
     // TODO: Create a printWalletContents method that would output the contents of the wallet in a readable format.

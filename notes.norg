@@ -88,3 +88,12 @@ https://www.geeksforgeeks.org/arraylist-in-java/
 Looking like ArrayList is what I'm looking for. I'm wondering if there's anything better though. The order of the Stocks in the Wallet isn't necessarily important.
 Shodan's telling me to use a HashMap actually, and I am going to have to implement a method to add similar currency values when adding Stocks to the Wallet.
 I guess it's right that it is more memory efficient not to have multiple entries of different quantities of the same currency.
+
+4/17/2025
+My focus today will be constructing the API request in CurrencyConverter.
+I have an API and my key ready.
+https://www.exchangerate-api.com/docs/java-currency-api
+Before making the API call, I need to read about GSON and how to properly use it so I can parse the JSON object returned by my API request.
+Modified my pom.xml file to include GSON as a dependency.
+Fixed the Classpaths error I was getting by updating the maven.compiler.source and target to Java 24.
+Should take a quick look at the rest of the pom.xml to make sure I don't have to come back and mess with it again later.
