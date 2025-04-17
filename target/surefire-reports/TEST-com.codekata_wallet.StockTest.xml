@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.codekata_wallet.StockTest" time="0" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.codekata_wallet.StockTest" time="0.068" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="D:\Michael\My Documents\Programming\Code Kata\Wallet\codekata_wallet\target\test-classes;D:\Michael\My Documents\Programming\Code Kata\Wallet\codekata_wallet\target\classes;C:\Users\Michael\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Michael\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.class.path" value="D:\Michael\My Documents\Programming\Code Kata\Wallet\codekata_wallet\target\test-classes;D:\Michael\My Documents\Programming\Code Kata\Wallet\codekata_wallet\target\classes;C:\Users\Michael\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Michael\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Michael\.m2\repository\com\google\code\gson\gson\2.13.0\gson-2.13.0.jar;C:\Users\Michael\.m2\repository\com\google\errorprone\error_prone_annotations\2.37.0\error_prone_annotations-2.37.0.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,10 +15,10 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin"/>
-    <property name="sun.java.command" value="C:\Users\Michael\AppData\Local\Temp\surefire7994027649465971678\surefirebooter727275295060624637.jar C:\Users\Michael\AppData\Local\Temp\surefire7994027649465971678 2025-04-07T18-29-24_230-jvmRun1 surefire8133436116321152147tmp surefire_016527629160979957522tmp"/>
+    <property name="sun.java.command" value="C:\Users\Michael\AppData\Local\Temp\surefire16787433561678429233\surefirebooter8060115760734914848.jar C:\Users\Michael\AppData\Local\Temp\surefire16787433561678429233 2025-04-17T14-27-48_066-jvmRun1 surefire14246886699142449262tmp surefire_010761959167686400793tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="${packageClassName}"/>
-    <property name="surefire.test.class.path" value="D:\Michael\My Documents\Programming\Code Kata\Wallet\codekata_wallet\target\test-classes;D:\Michael\My Documents\Programming\Code Kata\Wallet\codekata_wallet\target\classes;C:\Users\Michael\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Michael\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="test" value="com.codekata_wallet.StockTest#testStockConstructorAndGetters"/>
+    <property name="surefire.test.class.path" value="D:\Michael\My Documents\Programming\Code Kata\Wallet\codekata_wallet\target\test-classes;D:\Michael\My Documents\Programming\Code Kata\Wallet\codekata_wallet\target\classes;C:\Users\Michael\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Michael\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Michael\.m2\repository\com\google\code\gson\gson\2.13.0\gson-2.13.0.jar;C:\Users\Michael\.m2\repository\com\google\errorprone\error_prone_annotations\2.37.0\error_prone_annotations-2.37.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Michael"/>
     <property name="user.language" value="en"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Michael\AppData\Local\Temp\surefire7994027649465971678\surefirebooter727275295060624637.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Michael\AppData\Local\Temp\surefire16787433561678429233\surefirebooter8060115760734914848.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="24+36-3646"/>
@@ -60,5 +60,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testStockConstructorAndGetters" classname="com.codekata_wallet.StockTest" time="0"/>
+  <testcase name="testStockConstructorAndGetters" classname="com.codekata_wallet.StockTest" time="0.009"/>
 </testsuite>

@@ -97,3 +97,4 @@ Before making the API call, I need to read about GSON and how to properly use it
 Modified my pom.xml file to include GSON as a dependency.
 Fixed the Classpaths error I was getting by updating the maven.compiler.source and target to Java 24.
 Should take a quick look at the rest of the pom.xml to make sure I don't have to come back and mess with it again later.
+Need to make a better habit of error checking in my constructors. Can't let the AI humble me like that so often.
