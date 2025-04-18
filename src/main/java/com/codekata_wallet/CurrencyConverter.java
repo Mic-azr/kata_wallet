@@ -19,10 +19,10 @@ public class CurrencyConverter {
      * @return URI object representing the API endpoint
      * @throws URISyntaxException if the URI syntax is invalid
      */
-    private URI buildPairExchangeURL(String from, String to, String apiKeyString) throws URISyntaxException{
+    public URI buildPairExchangeURL(String from, String to, String apiKeyString) throws URISyntaxException{
         if (from == null || to == null || apiKeyString == null) {
             throw new IllegalArgumentException("Currency codes and API key cannot be null");
-        }
+        }                                  
         
         return new URI(
             "https",    //scheme
@@ -32,6 +32,17 @@ public class CurrencyConverter {
         );
     }
 
-    // TODO:
-    // public double getExchangeRate(String from, String to)
+    public double getExchangeRate(String from, String to) {
+        try {
+            // TODO: create environment variable containing api key
+            URI uri = buildPairExchangeURL(from, to, System.getenv("EXCHANGE_RATE_API_KEY"));
+            // TODO: Implement HTTP client to fetch the rate
+            // For now, returning a dummy value
+            return 1.0;
+        } catch (URISyntaxException e) {
+            // Log the error and return a sentinel value
+            System.err.println("Failed to build URL: " + e.getMessage());
+            return -1;
+        }
+    }
 }
