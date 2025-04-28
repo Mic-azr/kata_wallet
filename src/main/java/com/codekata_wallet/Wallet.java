@@ -24,8 +24,10 @@ public class Wallet {
             stocks.put(currency, stock);
         }
     }
-    // TODO:
-    // public void removeStock(Stock stock)
+    
+    public void removeStock(String currency) {
+        stocks.remove(currency);
+    }
 
 
     public Stock getStock(String stockType) {

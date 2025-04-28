@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.fail;
 import org.junit.Test;
 
@@ -74,9 +75,18 @@ public class WalletTest {
     // @Test
     // public int testGetTotalValue()
 
-    // TODO:
-    // @Test
-    // public void testRemoveStock()
+    @Test
+    public void testRemoveStock() {
+        HashMap<String, Stock> testStockHashMap = new HashMap<>();
+        Stock testStock1 = new Stock(20, "USD");
+        Stock testStock2 = new Stock(75, "CAN");
+        testStockHashMap.put(testStock1.getStockType(), testStock1);
+        testStockHashMap.put(testStock2.getStockType(), testStock2);
+        Wallet testWallet = new Wallet(testStockHashMap);
+
+        testWallet.removeStock(testStock1.getStockType());
+        assertNull(testWallet.getStock(testStock1.getStockType()));
+    }
     
     // TODO: 
     // @Test

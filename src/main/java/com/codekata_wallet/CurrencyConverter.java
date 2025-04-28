@@ -5,7 +5,9 @@ import java.net.URISyntaxException;
 
 /** 
 * From Copilot: 
-* "Logic: This class should interact with an external API to fetch exchange rates and provide a method to convert values." 
+* "Logic: This class should interact with an external API to fetch exchange rates 
+* and provide a method to convert values." 
+* @author Michael
 */
 public class CurrencyConverter {
     private static final String API_HOST = "v6.exchangerate-api.com";

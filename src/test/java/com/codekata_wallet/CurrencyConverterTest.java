@@ -6,6 +6,9 @@ import java.net.URISyntaxException;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
+/**
+ * @author Michael
+ */
 public class CurrencyConverterTest {
     @Test
     public void testBuildPairExchangeURL() throws URISyntaxException {
@@ -21,4 +24,8 @@ public class CurrencyConverterTest {
 
         assertEquals(expectedUri, actualURI);
     }
+
+    // @Test
+    // TODO:
+    // public double testGetExchangeRate()
 }
