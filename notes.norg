@@ -118,3 +118,6 @@ Going to start utilizing my Kanban board to keep track of this project
 Implemented a method inside Wallet.java to remove Stocks from Wallet, and wrote my first try at a test method
 I think the next biggest hurdle will be learning how to properly send an HTTP request to the exchange rate API in Java
 The API validator class can wait, that should be easy enough. Just checking the length of a string and making sure there are no special characters
+I lied, we're doing the API validator class before implementing the HTTP methods inside of CurrencyConvertor.
+Learning about how to use a regular expression to match Strings against.
+I need to check that supplied keys are the correct length and only contain characters from the necessary set (Upper/lowercase letters, numbers 0-9)

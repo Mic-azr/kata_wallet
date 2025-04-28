@@ -5,14 +5,18 @@
 
 package com.codekata_wallet;
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
  * @author Michael
  */
 public class StockTest {
+    // TODO:
+    // Rewrite this test as two separate methods
+    // One to test the constructor successfully creates a Stock
+    // Another to verify that correct quantity and stockType being assigned
     @Test
     public void testStockConstructorAndGetters(){
         int expectedQuantity = 101;
