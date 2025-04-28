@@ -111,3 +111,10 @@ Things to do:
 Learning how and why to store my API key in an environment variable. I know I shouldn't push my api key to version control (and I will continue trying not to)
 Just wondering what's the best practice to follow, which I feel is sort of the theme of this.
 I want to make a piece of software that fulfills a simple task, and is built as robustly and properly as I can manage. 
+
+4/28/2025
+It hasn't felt like ten days 💀
+Going to start utilizing my Kanban board to keep track of this project
+Implemented a method inside Wallet.java to remove Stocks from Wallet, and wrote my first try at a test method
+I think the next biggest hurdle will be learning how to properly send an HTTP request to the exchange rate API in Java
+The API validator class can wait, that should be easy enough. Just checking the length of a string and making sure there are no special characters

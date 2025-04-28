@@ -2,6 +2,8 @@ package com.codekata_wallet;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.http.HttpClient;
+import java.time.Duration;
 
 /** 
 * From Copilot: 
@@ -11,6 +13,14 @@ import java.net.URISyntaxException;
 */
 public class CurrencyConverter {
     private static final String API_HOST = "v6.exchangerate-api.com";
+    private final HttpClient httpClient;
+
+    public CurrencyConverter() {
+        this.httpClient = HttpClient.newBuilder()
+        .version(HttpClient.Version.HTTP_2)
+        .connectTimeout(Duration.ofSeconds(10))
+        .build();
+    }
     
     /**
      * Builds the API endpoint URL for getting the exchange rate between a pair of currencies
