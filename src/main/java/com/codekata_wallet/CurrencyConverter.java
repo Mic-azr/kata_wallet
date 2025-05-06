@@ -13,9 +13,11 @@ import java.time.Duration;
 */
 public class CurrencyConverter {
     private static final String API_HOST = "v6.exchangerate-api.com";
+    private final ApiConfig apiConfig;
     private final HttpClient httpClient;
 
     public CurrencyConverter() {
+        this.apiConfig = new ApiConfig();
         this.httpClient = HttpClient.newBuilder()
         .version(HttpClient.Version.HTTP_2)
         .connectTimeout(Duration.ofSeconds(10))
@@ -31,15 +33,15 @@ public class CurrencyConverter {
      * @return URI object representing the API endpoint
      * @throws URISyntaxException if the URI syntax is invalid
      */
-    public URI buildPairExchangeURL(String from, String to, String apiKeyString) throws URISyntaxException{
-        if (from == null || to == null || apiKeyString == null) {
+    public URI buildPairExchangeURL(String from, String to) throws URISyntaxException{
+        if (from == null || to == null || apiConfig.getApiKey() == null) {
             throw new IllegalArgumentException("Currency codes and API key cannot be null");
         }                                  
         
         return new URI(
             "https",    //scheme
             API_HOST,    //host
-            "/v6/" + apiKeyString + "/pair/" + from + "/" + to, //path
+            "/v6/" + apiConfig.getApiKey() + "/pair/" + from + "/" + to, //path
             null    //fragment
         );
     }
@@ -47,7 +49,7 @@ public class CurrencyConverter {
     public double getExchangeRate(String from, String to) {
         try {
             // TODO: create environment variable containing api key
-            URI uri = buildPairExchangeURL(from, to, System.getenv("EXCHANGE_RATE_API_KEY"));
+            URI uri = buildPairExchangeURL(from, to);
             // TODO: Implement HTTP client to fetch the rate
             // For now, returning a dummy value
             return 1.0;

@@ -19,5 +19,10 @@ public class App
         //
         // CurrencyConverter should be an example of this interface:
         // CurrencyConverter.convert(from: StockType, to: Currency) -> double
+
+        //TEMPORARY CODE DO NOT COMMIT
+        String apiKey = System.getenv("EXCHANGE_RATE_API_KEY");
+        System.out.println("API Key configured: " + (apiKey != null && !apiKey.isEmpty()));
+        //TEMPORARY CODE DO NOT COMMIT
     }
 }

@@ -1,19 +1,38 @@
 package com.codekata_wallet;
 
+import java.io.IOException;
+import java.util.Properties;
+
 /**
  * Class for validating the API key supplied by the user
  * @author Michael 
  */
-
 public class ApiConfig {
-    private static final int API_KEY_EXPECTED_LENGTH = 24;
-    private static final String API_KEY_PATTERN = "^[A-Za-z0-9]+$";
+    private static final Properties properties = new Properties();
+    private static final int API_KEY_EXPECTED_LENGTH;
+    private static final String API_KEY_PATTERN;
+
+    static {
+        try {
+            properties.load(ApiConfig.class.getClassLoader()
+                .getResourceAsStream("config.properties"));
+            API_KEY_EXPECTED_LENGTH = Integer.parseInt(
+                properties.getProperty("api.key.length", "24"));
+            API_KEY_PATTERN = properties.getProperty("api.key.pattern", "^[A-Za-z0-9]+$");
+        } catch (IOException e) {
+            throw new ExceptionInInitializerError("Failed to load config.properties");
+        }
+    }
 
     private final String apiKey;
 
-    public ApiConfig(String apiKey) {
-        validateApiKey(apiKey);
-        this.apiKey = apiKey;
+    public ApiConfig() {
+        String loadedKey = System.getenv("EXCHANGE_RATE_API_KEY");
+        if (loadedKey == null) {
+            loadedKey = properties.getProperty("exchange.rate.api.key");
+        }
+        validateApiKey(loadedKey);
+        this.apiKey = loadedKey;
     }
 
     public String getApiKey() {

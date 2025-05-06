@@ -121,3 +121,17 @@ The API validator class can wait, that should be easy enough. Just checking the 
 I lied, we're doing the API validator class before implementing the HTTP methods inside of CurrencyConvertor.
 Learning about how to use a regular expression to match Strings against.
 I need to check that supplied keys are the correct length and only contain characters from the necessary set (Upper/lowercase letters, numbers 0-9)
+
+5/6/2025
+ApiConfig.java is looking okay as it is. Next step is to implement it within CurrencyConverter to send out the API request.
+First thing I need to learn is how to safely store and use my API key within this project repo.
+AI assistant is advising me to use a Java.util.Properties file to hold information about the API key.
+Will read the documentation before deciding if I need to import.
+https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html
+Says this class has been around since JDK 1.0, so if I did import it, at least it would be something that's likely seen some practical use.
+ApiConfig would need some refactoring to take advantage of the Properties class.
+The temporary code in App.java is saying that my Api Key is not being properly configured the way things are right now...
+Don't know if the environment variable containing the actual API key was set correctly.
+Some online resources and Copilot are saying I should create a launch.json file and set the environment variable in there, making sure to include that file in the .gitignore of course
+Was I right in picking Maven over Gradle as a Java build tool? I didn't have any particular reason to choose one over the other considering the modest scale of this project. Ugh...
+
