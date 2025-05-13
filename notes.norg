@@ -135,3 +135,5 @@ Don't know if the environment variable containing the actual API key was set cor
 Some online resources and Copilot are saying I should create a launch.json file and set the environment variable in there, making sure to include that file in the .gitignore of course
 Was I right in picking Maven over Gradle as a Java build tool? I didn't have any particular reason to choose one over the other considering the modest scale of this project. Ugh...
 
+5/13/2025
+Created a launch.json file, temporary API test in main returns true. Think I'm ready to begin implementing the HTTP client now it seems I have the api key correctly stored in an environment variable.
