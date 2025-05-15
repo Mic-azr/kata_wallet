@@ -145,3 +145,5 @@ https://stackoverflow.com/questions/29971572/how-do-i-add-environment-variables-
 The HttpClient, HttpRequest and HttpResponse look set up correctly in CurrencyConverter.
 https://openjdk.org/groups/net/httpclient/intro.html
 Next thing to do will be to parse the JSON request returned by the API, and extract the object containing the value of the exchange rate between the pair of currencies.
+Will be including gson as a dependency for this purpose
+First I want to create a test class for ApiConfig and have those tests pass

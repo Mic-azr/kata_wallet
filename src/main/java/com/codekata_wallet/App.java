@@ -20,6 +20,5 @@ public class App
         // CurrencyConverter should be an example of this interface:
         // CurrencyConverter.convert(from: StockType, to: Currency) -> double
 
-        
     }
 }

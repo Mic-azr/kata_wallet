@@ -28,7 +28,7 @@ public class CurrencyConverter {
     }
 
     /**
-     * TODO: buildStandardExchangeURL
+     * TODO: buildStandardExchangeURL(String from) throws URISyntaxException{}
      * @param from
      * @return URI object representing the API endpoint
      * @throws URISyntaxException
@@ -56,6 +56,18 @@ public class CurrencyConverter {
         );
     }
 
+    /**
+     * TODO: getStandardExchangeRates(String from)
+     * @param from
+     * @return
+     */
+    
+    /**
+     * Fetches the exchange rate between two currencies from the API
+     * @param from
+     * @param to
+     * @return double representing the exchange rate
+     */
     public double getPairExchangeRate(String from, String to) {
         try {
             URI uri = buildPairExchangeURL(from, to);
