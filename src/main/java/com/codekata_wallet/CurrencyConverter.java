@@ -1,8 +1,11 @@
 package com.codekata_wallet;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.time.Duration;
 
 /** 
@@ -23,6 +26,13 @@ public class CurrencyConverter {
         .connectTimeout(Duration.ofSeconds(10))
         .build();
     }
+
+    /**
+     * TODO: buildStandardExchangeURL
+     * @param from
+     * @return URI object representing the API endpoint
+     * @throws URISyntaxException
+     */
     
     /**
      * Builds the API endpoint URL for getting the exchange rate between a pair of currencies
@@ -46,14 +56,32 @@ public class CurrencyConverter {
         );
     }
 
-    public double getExchangeRate(String from, String to) {
+    public double getPairExchangeRate(String from, String to) {
         try {
-            // TODO: create environment variable containing api key
             URI uri = buildPairExchangeURL(from, to);
-            // TODO: Implement HTTP client to fetch the rate
-            // For now, returning a dummy value
-            return 1.0;
-        } catch (URISyntaxException e) {
+
+            HttpRequest request = HttpRequest.newBuilder()
+                .GET()
+                .uri(uri)
+                .timeout(Duration.ofSeconds(10))
+                .header("Accept", "application/json")
+                .build();
+            
+            // Using synchronous HttpResponse API https://openjdk.org/groups/net/httpclient/intro.html
+            // Could try refactoring to use asynchronous API for future exercise
+            HttpResponse<String> response = httpClient.send(
+                request, 
+                HttpResponse.BodyHandlers.ofString()
+            );
+
+            if (response.statusCode() == 200) {
+                // Parse the response to extract the exchange rate
+                return 1.0; // return a variable of type double representing the exchange rate
+            } else {
+                throw new RuntimeException("API call failed with status: " + response.statusCode());
+            }
+
+        } catch (URISyntaxException | IOException | InterruptedException e) {
             // Log the error and return a sentinel value
             System.err.println("Failed to build URL: " + e.getMessage());
             return -1;

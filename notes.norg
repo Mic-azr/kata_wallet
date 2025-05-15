@@ -137,3 +137,11 @@ Was I right in picking Maven over Gradle as a Java build tool? I didn't have any
 
 5/13/2025
 Created a launch.json file, temporary API test in main returns true. Think I'm ready to begin implementing the HTTP client now it seems I have the api key correctly stored in an environment variable.
+
+5/15/2025
+Reading up some more on environment variables and best practices for Java projects.
+https://configu.com/blog/working-with-java-environment-variables-4-ways-to-set-variables/
+https://stackoverflow.com/questions/29971572/how-do-i-add-environment-variables-to-launch-json-in-vscode#45426595
+The HttpClient, HttpRequest and HttpResponse look set up correctly in CurrencyConverter.
+https://openjdk.org/groups/net/httpclient/intro.html
+Next thing to do will be to parse the JSON request returned by the API, and extract the object containing the value of the exchange rate between the pair of currencies.

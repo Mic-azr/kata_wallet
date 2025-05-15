@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.codekata_wallet.CurrencyConverterTest" time="0.053" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.codekata_wallet.CurrencyConverterTest" time="0.074" tests="1" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,9 +15,9 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin"/>
-    <property name="sun.java.command" value="C:\Users\Michael\AppData\Local\Temp\surefire11026227437906942465\surefirebooter16771511188396134917.jar C:\Users\Michael\AppData\Local\Temp\surefire11026227437906942465 2025-04-18T15-18-15_188-jvmRun1 surefire139382296088669006tmp surefire_017011791250164357769tmp"/>
+    <property name="sun.java.command" value="C:\Users\Michael\AppData\Local\Temp\surefire3141614208424819198\surefirebooter11033415589819688769.jar C:\Users\Michael\AppData\Local\Temp\surefire3141614208424819198 2025-05-15T17-06-19_198-jvmRun1 surefire1008380369525575407tmp surefire_010805996710122485531tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="com.codekata_wallet.CurrencyConverterTest"/>
+    <property name="test" value="com.codekata_wallet.CurrencyConverterTest#testBuildPairExchangeURL"/>
     <property name="surefire.test.class.path" value="D:\Michael\My Documents\Programming\Code Kata\Wallet\codekata_wallet\target\test-classes;D:\Michael\My Documents\Programming\Code Kata\Wallet\codekata_wallet\target\classes;C:\Users\Michael\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Michael\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Michael\.m2\repository\com\google\code\gson\gson\2.13.0\gson-2.13.0.jar;C:\Users\Michael\.m2\repository\com\google\errorprone\error_prone_annotations\2.37.0\error_prone_annotations-2.37.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Michael"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Michael\AppData\Local\Temp\surefire11026227437906942465\surefirebooter16771511188396134917.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Michael\AppData\Local\Temp\surefire3141614208424819198\surefirebooter11033415589819688769.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="24+36-3646"/>
@@ -60,5 +60,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testBuildPairExchangeURL" classname="com.codekata_wallet.CurrencyConverterTest" time="0.01"/>
+  <testcase name="testBuildPairExchangeURL" classname="com.codekata_wallet.CurrencyConverterTest" time="0.018">
+    <error type="java.lang.ExceptionInInitializerError">java.lang.ExceptionInInitializerError
+	at com.codekata_wallet.CurrencyConverterTest.testBuildPairExchangeURL(CurrencyConverterTest.java:21)
+Caused by: java.lang.NullPointerException: inStream parameter is null
+	at com.codekata_wallet.CurrencyConverterTest.testBuildPairExchangeURL(CurrencyConverterTest.java:21)
+</error>
+  </testcase>
 </testsuite>
