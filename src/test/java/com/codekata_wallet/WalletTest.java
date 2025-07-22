@@ -18,6 +18,7 @@ import org.junit.Test;
  * @author Michael
  */
 public class WalletTest {
+    //TODO: Rewrite these constructor tests
     @Test
     public void testWalletDefaultConstructor() {
         try {
@@ -28,6 +29,7 @@ public class WalletTest {
         }
     }
 
+    //TODO: Rewrite these constructor tests
     @Test
     public void testWalletOverloadedConstructor() {
         HashMap<String, Stock> testStockHashMap = new HashMap<>();

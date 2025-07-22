@@ -1,24 +1,23 @@
 package com.codekata_wallet;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
  * @author Michael
  */
 public class ApiConfigTest {
+    private static final String TEST_API_KEY = "abcd1234efab5678cdef9021";
+
+    @Before
+    public void setUp() {
+        System.setProperty("EXCHANGE_RATE_API_KEY", TEST_API_KEY);
+    }
+
     @Test
     public void testApiConfigConstructor() {
-        // Assuming the API key is valid and set in the environment variables
-        String validKey = System.getenv("EXCHANGE_RATE_API_KEY");
-        if (validKey == null) {
-            fail("API key is not set in the environment variables");
-        }
         ApiConfig apiConfig = new ApiConfig();
-        String apiKey = apiConfig.getApiKey();
-        assertTrue(apiKey != null && !apiKey.isEmpty());
-        assertEquals(validKey, apiKey);
+        assertEquals(TEST_API_KEY, apiConfig.getApiKey());        
     }
 }

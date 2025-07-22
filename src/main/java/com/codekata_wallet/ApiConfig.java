@@ -18,7 +18,7 @@ public class ApiConfig {
                 .getResourceAsStream("config.properties"));
             API_KEY_EXPECTED_LENGTH = Integer.parseInt(
                 properties.getProperty("api.key.length", "24"));
-            API_KEY_PATTERN = properties.getProperty("api.key.pattern", "^[A-Za-z0-9]+$");
+            API_KEY_PATTERN = properties.getProperty("api.key.pattern", "^[a-f0-9]+$");
         } catch (IOException e) {
             throw new ExceptionInInitializerError("Failed to load config.properties");
         }
@@ -29,7 +29,7 @@ public class ApiConfig {
     public ApiConfig() {
         String loadedKey = System.getenv("EXCHANGE_RATE_API_KEY");
         if (loadedKey == null) {
-            loadedKey = properties.getProperty("exchange.rate.api.key");
+            loadedKey = properties.getProperty("exchange.rate.api.key"); //TODO value is being set to "${EXCHANGE_RATE_API_KEY}", not the actual or test key
         }
         validateApiKey(loadedKey);
         this.apiKey = loadedKey;

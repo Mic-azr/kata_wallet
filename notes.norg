@@ -147,3 +147,8 @@ https://openjdk.org/groups/net/httpclient/intro.html
 Next thing to do will be to parse the JSON request returned by the API, and extract the object containing the value of the exchange rate between the pair of currencies.
 Will be including gson as a dependency for this purpose
 First I want to create a test class for ApiConfig and have those tests pass
+
+7/22/2025
+Having an issue with ApiConfig. I think that in the constructor, the first check fails, and the ${EXCHANGE_RATE_API_KEY} is being read literally into ApiConfig.apiKey.
+The $ and {} are being caught by the IllegalArgumentException.
+The question is, why isn't the environment variable being read, and the property is being read in as a string?
