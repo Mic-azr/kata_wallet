@@ -152,3 +152,14 @@ First I want to create a test class for ApiConfig and have those tests pass
 Having an issue with ApiConfig. I think that in the constructor, the first check fails, and the ${EXCHANGE_RATE_API_KEY} is being read literally into ApiConfig.apiKey.
 The $ and {} are being caught by the IllegalArgumentException.
 The question is, why isn't the environment variable being read, and the property is being read in as a string?
+
+10/16/2025
+Looking like today's lesson is that I should have been staying away from environment variables, and instead should have been using Java system properties.
+From Sonnet: 
+"
+Key Differences:
+    System.getenv() reads environment variables set at the OS level
+    System.setProperty() sets Java system properties, which are different from environment variables
+    You cannot modify environment variables at runtime using Java code
+"
+The tests are passing, I'm just curious where my actual API key is set as a Java system property.

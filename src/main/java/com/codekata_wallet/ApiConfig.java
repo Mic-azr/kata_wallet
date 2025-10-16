@@ -27,9 +27,9 @@ public class ApiConfig {
     private final String apiKey;
 
     public ApiConfig() {
-        String loadedKey = System.getenv("EXCHANGE_RATE_API_KEY");
+        String loadedKey = System.getProperty("EXCHANGE_RATE_API_KEY");
         if (loadedKey == null) {
-            loadedKey = properties.getProperty("exchange.rate.api.key"); //TODO value is being set to "${EXCHANGE_RATE_API_KEY}", not the actual or test key
+            loadedKey = System.getenv("EXCHANGE_RATE_API_KEY");
         }
         validateApiKey(loadedKey);
         this.apiKey = loadedKey;

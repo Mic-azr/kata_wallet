@@ -6,5 +6,9 @@
             "default": true
         }
     ],
-    "java.debug.settings.vmArgs": "-DEXCHANGE_RATE_API_KEY=e9d6eb876e33061c42cfee51"
+    "java.test.config": {
+        "env": {
+            "EXCHANGE_RATE_API_KEY": "abcd1234efab5678cdef9021"
+        }
+    }
 }
